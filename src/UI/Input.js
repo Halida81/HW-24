@@ -2,9 +2,8 @@ import styled from "styled-components";
 
 const InputField = styled.input`
 display:block;
-position:relative:
+position:relative;
 padding:24px;
-padding:20px;
 margin-left:auto;
 margin-right:auto;
 width:300px;
@@ -13,10 +12,17 @@ border-radius: 5px;
 
 `;
 
+const Label = styled.label`
+color:#023020;
+display:flex;
+justify-content:center;
+margin-top:10px;
+`
+
 function Input({ value, label, name, placeholder, type, onChange }) {
   return (
     <div>
-      {label && <label htmlFor="input">{label}</label>}<br/>
+      {label && <Label  htmlFor="input">{label}</Label>}<br/>
       <InputField
         type={type}
         value={value}

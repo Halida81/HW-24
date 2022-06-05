@@ -14,7 +14,7 @@ const Title = styled.h1`
 
 const Form = styled.form`
 display:block;
-position:relative:
+position:relative; 
 padding:24px;
 padding:20px;
 margin-left:auto;
@@ -23,6 +23,24 @@ width:400px;
 border: solid 1px #ccc;
 border-radius: 25px;
 `;
+
+export const Button = styled.button`
+display:block;
+position:relative;
+padding:24px;
+margin-left:auto;
+margin-right:auto;
+margin-top: 20px;
+width:100px;
+border: solid 1px #ccc;
+border-radius: 5px;
+&:hover,
+&:active{
+  background-color: darkgreen;
+  border-color:darkgreen;
+  color:white
+}
+`
 function App() {
   // const [isValid, setIsValid] = useState(null);
   const dispatch = useDispatch();
@@ -88,7 +106,7 @@ function App() {
             label="Date"
           />
         </div>
-       <Input type='submit' disabled={!isValid}/>
+  <Button type='submit' disabled={!isValid}> Add</Button>
         {console.log(isValid)}
       </Form>
       <ul>

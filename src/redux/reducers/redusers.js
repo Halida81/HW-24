@@ -1,5 +1,5 @@
 const initialState = {
-  expense: [], //баштапкы абалы пустой массив болушу керек
+  expense: [{ title: "mac", price: "2000", date: "2022-03-12" }], //баштапкы абалы пустой массив болушу керек
 };
 
 let nextId = 0;
@@ -17,7 +17,7 @@ export const reducerFunc = (state = initialState, action) => {
             id: nextId++,
           },
         ],
-      }
+      };
     case "DELETE":
       return {
         ...state,
